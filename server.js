@@ -125,11 +125,12 @@ app.get('/ui/madi.png', function (req, res) {
 });
 
 var names=[];
-app.get('/submit-name/:name',function(req,res)
+//app.get('/submit-name/:name',function(req,res)
+app.get('/submit-name',function(req,res)//URL: /submit-name?name=xxxxx
 {
     //get the name from request object
-    var name=req.params.name;//TODO 
-    
+    //var name=req.params.name;//TODO 
+    var name=req.query.name;
     names.push(name);//here name is string,how can we convert array of object into string.
 //JSON:javascript object notation-way of converting javascript object into string
     res.send(JSON.stringify(names));
