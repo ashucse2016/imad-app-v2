@@ -100,7 +100,7 @@ var pool = new Pool(config);
 app.get('/test-db',function(req,res){
     //make a select request
     //return a response with the results
-    Pool.query('SELECT * FROM test',function(err,result)
+    pool.query('SELECT * FROM test',function(err,result)
     {if(err)
     {res.status(500).send(err.toString());
     }
