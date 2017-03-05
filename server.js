@@ -7,7 +7,7 @@ var config={
     database:'ashucse2016',
     host:'db.imad.hasura-app.io',
     port:'5432',
-    password:db-ashucse2016-65765// process.env.DB_PASSWORD    
+    password: process.env.DB_PASSWORD    
 };
 
 var app = express();
