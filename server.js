@@ -136,7 +136,7 @@ app.get('/articles/:articleName',function(req,res){
   //SELECT * FROM article WHERE
  // var articleName=req.params.articleName;
 // SELECT * FROM article WHERE title='article-one';DELETE WHERE a='asdf'
- pool.query("SELECT * from article WHERE title='"+ req.params.articleName+"'",function(err,result){
+ pool.query("SELECT * from article WHERE title=$1",[req.params.articleName],function(err,result){
      
     if(err)
     {res.status(500).send(err.toString());
