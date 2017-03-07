@@ -13,43 +13,7 @@ var config={
 var app = express();
 app.use(morgan('combined'));
 
-var article={
- 'article-one':{
-    title:'Article one| Tomcat Gopal',
-    heading:'article one',
-    date:'sep 5,2016',
-    content: `<p>
-                if you are beginner and you want to learn programming.you must have some right approach to start learning.
-                first step,always try to learn from offical docs which is provided ,when you downloaded IDE,if you have any problem regarding setup and programming.you can search on google.<strong>stackoverflow</strong> is good resource to clear your all kind of doubts.you can also watch videos from youtube.But,i recommend you to follow only one resource.otherwise ,you will get confuse and irritate while learning.golden rule:whatever you learn,try to implement i.e do practical.programming is all about practice practice and practice.so more u do practice,more u learn.
-            </p>
-            <p>
-                c language:it is procedural based language in which whole program is divided in form of function,local variable ,global variable and so on.for making of large program,it is become more complicated and take lot of space .
-                therefore,c++ language(superset of c language)is created to remove all this problem by implementing OOPs concept.
-            </p>`
-},
-'article-two':{title:'Article two| Ashutosh Kumar',
-    heading:'article Two',
-    date:'sep 6,2016',
-    content: `<p>
-                if you are beginner and you want to learn programming.you must have some right approach to start learning.
-                first step,always try to learn from offical docs which is provided ,when you downloaded IDE,if you have any problem regarding setup and programming.you can search on google.<strong>stackoverflow</strong> is good resource to clear your all kind of doubts.you can also watch videos from youtube.But,i recommend you to follow only one resource.otherwise ,you will get confuse and irritate while learning.golden rule:whatever you learn,try to implement i.e do practical.programming is all about practice practice and practice.so more u do practice,more u learn.
-            </p>
-            <p>
-                c language:it is procedural based language in which whole program is divided in form of function,local variable ,global variable and so on.for making of large program,it is become more complicated and take lot of space .
-                therefore,c++ language(superset of c language)is created to remove all this problem by implementing OOPs concept.
-            </p>`},
-'article-three':{title:'Article Three| Ashutosh kumar',
-    heading:'article one',
-    date:'sep 7,2016',
-    content: `<p>
-                if you are beginner and you want to learn programming.you must have some right approach to start learning.
-                first step,always try to learn from offical docs which is provided ,when you downloaded IDE,if you have any problem regarding setup and programming.you can search on google.<strong>stackoverflow</strong> is good resource to clear your all kind of doubts.you can also watch videos from youtube.But,i recommend you to follow only one resource.otherwise ,you will get confuse and irritate while learning.golden rule:whatever you learn,try to implement i.e do practical.programming is all about practice practice and practice.so more u do practice,more u learn.
-            </p>
-            <p>
-                c language:it is procedural based language in which whole program is divided in form of function,local variable ,global variable and so on.for making of large program,it is become more complicated and take lot of space .
-                therefore,c++ language(superset of c language)is created to remove all this problem by implementing OOPs concept.
-            </p>`}
-};
+
 
 function createTemplate (data){
     var title=data.title;
