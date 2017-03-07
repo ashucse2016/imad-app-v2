@@ -133,8 +133,10 @@ app.get('/articles/:articleName',function(req,res){
   //articleNmae==article-one
   //res.send(createTemplate(articleOne));
   //articles[articleName]=={} content object for article one 
-  var articleName=req.params.articleName;
- pool.query("SELECT * from article WHERE title='article-one'"+req.params.articleName,function(err,result){
+  //SELECT * FROM article WHERE
+ // var articleName=req.params.articleName;
+// SELECT * FROM article WHERE title='article-one';
+ pool.query("SELECT * from article WHERE title='"+ req.params.articleName+"'",function(err,result){
      
     if(err)
     {res.status(500).send(err.toString());
