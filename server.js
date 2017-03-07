@@ -77,7 +77,7 @@ function createTemplate (data){
             ${heading}
         </h3>
         <div>
-            ${date}
+            ${date.toDateString()}
         </div>
         <div>
            ${content} 
@@ -135,7 +135,7 @@ app.get('/articles/:articleName',function(req,res){
   //articles[articleName]=={} content object for article one 
   //SELECT * FROM article WHERE
  // var articleName=req.params.articleName;
-// SELECT * FROM article WHERE title='article-one';
+// SELECT * FROM article WHERE title='article-one';DELETE WHERE a='asdf'
  pool.query("SELECT * from article WHERE title='"+ req.params.articleName+"'",function(err,result){
      
     if(err)
