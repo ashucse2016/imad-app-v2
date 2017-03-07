@@ -128,13 +128,30 @@ app.get('/submit-name',function(req,res)//URL: /submit-name?name=xxxxx
     res.send(JSON.stringify(names));
     
 });
-app.get('/:articleName',function(req,res){
+app.get('/articles/:articleName',function(req,res){
 //    res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));
   //articleNmae==article-one
   //res.send(createTemplate(articleOne));
   //articles[articleName]=={} content object for article one 
   var articleName=req.params.articleName;
-  res.send(createTemplate(article[articleName]));
+ pool.query("SELECT * from article WHERE title='article-one'"+req.params.articleName,function(err,result){
+     
+    if(err)
+    {res.status(500).send(err.toString());
+        
+    }
+    else
+ {if(result.rows.length===0)
+ {res.status(404).send('Article not found');
+ }
+ else
+ {var articledata=result.rows[0];
+res.send(createTemplate(articleData));
+ }
+     
+ }
+ });
+  
 });
 /*
 app.get('/article-two',function(req,res){
