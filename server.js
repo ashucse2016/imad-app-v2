@@ -76,6 +76,12 @@ app.get('/hash/:input',function(req,res)
    res.send(hashedString);
    
 });
+app.get('/create-user',function(req,res)
+{
+ //username,password
+ var dbString=
+    
+});
 var pool = new Pool(config);
 app.get('/test-db',function(req,res){
     //make a select request
