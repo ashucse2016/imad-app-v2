@@ -148,9 +148,9 @@ else
 
 app.get('/check-login',function(req,res)
 {
-   if(req.session && req.ssession.oath && req.session.auth.userId)
+   if(req.session && req.ssession.auth && req.session.auth.userId)
    {
-       res.send('you are logged in:'+req.session.outh.userId.toString());
+       res.send('you are logged in:'+req.session.auth.userId.toString());
    }
    else
    {res.send('you are logged in');
